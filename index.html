@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Complete Cheatsheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 DSA Complete Cheatsheet</h1>
+        <p style="text-align: center; font-style: italic; color: #7f8c8d;">Quick Revision के लिए All Important Functions</p>
+        
+        <button class="download-btn" onclick="generatePDF()">📄 PDF Download करें</button>
+
+        <div class="quick-nav">
+            <a href="#string" class="nav-item">String</a>
+            <a href="#vector" class="nav-item">Vector</a>
+            <a href="#array" class="nav-item">Array</a>
+            <a href="#sorting" class="nav-item">Sorting</a>
+            <a href="#searching" class="nav-item">Searching</a>
+            <a href="#math" class="nav-item">Math</a>
+            <a href="#character" class="nav-item">Character</a>
+            <a href="#stack" class="nav-item">Stack/Queue</a>
+            <a href="#set" class="nav-item">Set/Map</a>
+            <a href="#algorithms" class="nav-item">STL Algo</a>
+        </div>
+
+        <section id="string">
+            <div class="section-header">📝 STRING FUNCTIONS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">s.length() / s.size()</div>
+                    <div class="function-desc">String की length return करता है</div>
+                    <div class="function-syntax">int len = s.length();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.empty()</div>
+                    <div class="function-desc">String empty है या नहीं check करता है</div>
+                    <div class="function-syntax">if(s.empty()) { /* empty */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.push_back(ch)</div>
+                    <div class="function-desc">String के end में character add करता है</div>
+                    <div class="function-syntax">s.push_back('a');</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.pop_back()</div>
+                    <div class="function-desc">Last character को remove करता है</div>
+                    <div class="function-syntax">s.pop_back();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.substr(pos, len)</div>
+                    <div class="function-desc">Substring return करता है</div>
+                    <div class="function-syntax">string sub = s.substr(2, 5);</div>
+                    <div class="complexity">O(len)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.find(str)</div>
+                    <div class="function-desc">Substring का position find करता है</div>
+                    <div class="function-syntax">size_t pos = s.find("abc");</div>
+                    <div class="complexity">O(n*m)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.insert(pos, str)</div>
+                    <div class="function-desc">Specified position पर string insert करता है</div>
+                    <div class="function-syntax">s.insert(3, "xyz");</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.erase(pos, len)</div>
+                    <div class="function-desc">Characters को remove करता है</div>
+                    <div class="function-syntax">s.erase(2, 3);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.replace(pos, len, str)</div>
+                    <div class="function-desc">Part को replace करता है</div>
+                    <div class="function-syntax">s.replace(0, 2, "hi");</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">reverse(s.begin(), s.end())</div>
+                    <div class="function-desc">String को reverse करता है</div>
+                    <div class="function-syntax">reverse(s.begin(), s.end());</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">sort(s.begin(), s.end())</div>
+                    <div class="function-desc">String को sort करता है</div>
+                    <div class="function-syntax">sort(s.begin(), s.end());</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.compare(str)</div>
+                    <div class="function-desc">Strings को compare करता है</div>
+                    <div class="function-syntax">int result = s.compare("abc");</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vector">
+            <div class="section-header">📊 VECTOR FUNCTIONS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">v.size()</div>
+                    <div class="function-desc">Vector का size return करता है</div>
+                    <div class="function-syntax">int size = v.size();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.empty()</div>
+                    <div class="function-desc">Vector empty है या नहीं</div>
+                    <div class="function-syntax">if(v.empty()) { /* empty */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.push_back(val)</div>
+                    <div class="function-desc">End में element add करता है</div>
+                    <div class="function-syntax">v.push_back(10);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.pop_back()</div>
+                    <div class="function-desc">Last element को remove करता है</div>
+                    <div class="function-syntax">v.pop_back();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.front()</div>
+                    <div class="function-desc">First element return करता है</div>
+                    <div class="function-syntax">int first = v.front();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.back()</div>
+                    <div class="function-desc">Last element return करता है</div>
+                    <div class="function-syntax">int last = v.back();</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.insert(pos, val)</div>
+                    <div class="function-desc">Specified position पर insert करता है</div>
+                    <div class="function-syntax">v.insert(v.begin()+2, 99);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.erase(pos)</div>
+                    <div class="function-desc">Element को remove करता है</div>
+                    <div class="function-syntax">v.erase(v.begin()+2);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.clear()</div>
+                    <div class="function-desc">सभी elements को remove करता है</div>
+                    <div class="function-syntax">v.clear();</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">v.resize(n)</div>
+                    <div class="function-desc">Vector का size change करता है</div>
+                    <div class="function-syntax">v.resize(10);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">reverse(v.begin(), v.end())</div>
+                    <div class="function-desc">Vector को reverse करता है</div>
+                    <div class="function-syntax">reverse(v.begin(), v.end());</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">sort(v.begin(), v.end())</div>
+                    <div class="function-desc">Vector को sort करता है</div>
+                    <div class="function-syntax">sort(v.begin(), v.end());</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sorting">
+            <div class="section-header">🔄 SORTING ALGORITHMS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">sort(arr, arr+n)</div>
+                    <div class="function-desc">Array को sort करता है</div>
+                    <div class="function-syntax">sort(arr, arr+n);</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">sort(v.begin(), v.end())</div>
+                    <div class="function-desc">Vector को sort करता है</div>
+                    <div class="function-syntax">sort(v.begin(), v.end());</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">sort(arr, arr+n, greater<int>())</div>
+                    <div class="function-desc">Descending order में sort करता है</div>
+                    <div class="function-syntax">sort(arr, arr+n, greater&lt;int&gt;());</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">stable_sort()</div>
+                    <div class="function-desc">Stable sorting (equal elements का order maintain)</div>
+                    <div class="function-syntax">stable_sort(v.begin(), v.end());</div>
+                    <div class="complexity">O(n log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">partial_sort()</div>
+                    <div class="function-desc">Partially sort करता है</div>
+                    <div class="function-syntax">partial_sort(v.begin(), v.begin()+k, v.end());</div>
+                    <div class="complexity">O(n log k)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">nth_element()</div>
+                    <div class="function-desc">nth position element को correct position पर रखता है</div>
+                    <div class="function-syntax">nth_element(v.begin(), v.begin()+k, v.end());</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="searching">
+            <div class="section-header">🔍 SEARCHING ALGORITHMS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">binary_search()</div>
+                    <div class="function-desc">Binary search (sorted array में)</div>
+                    <div class="function-syntax">bool found = binary_search(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">lower_bound()</div>
+                    <div class="function-desc">First position जहाँ element >= x</div>
+                    <div class="function-syntax">auto it = lower_bound(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">upper_bound()</div>
+                    <div class="function-desc">First position जहाँ element > x</div>
+                    <div class="function-syntax">auto it = upper_bound(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">find()</div>
+                    <div class="function-desc">Linear search करता है</div>
+                    <div class="function-syntax">auto it = find(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">count()</div>
+                    <div class="function-desc">Element के occurrences count करता है</div>
+                    <div class="function-syntax">int cnt = count(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">equal_range()</div>
+                    <div class="function-desc">Lower bound और upper bound दोनों return करता है</div>
+                    <div class="function-syntax">auto p = equal_range(v.begin(), v.end(), x);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="character">
+            <div class="section-header">🔤 CHARACTER FUNCTIONS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">isalpha(c)</div>
+                    <div class="function-desc">Character alphabet है या नहीं</div>
+                    <div class="function-syntax">if(isalpha(c)) { /* alphabet */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">isdigit(c)</div>
+                    <div class="function-desc">Character digit है या नहीं</div>
+                    <div class="function-syntax">if(isdigit(c)) { /* digit */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">isalnum(c)</div>
+                    <div class="function-desc">Character alphanumeric है या नहीं</div>
+                    <div class="function-syntax">if(isalnum(c)) { /* alphanumeric */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">isupper(c)</div>
+                    <div class="function-desc">Character uppercase है या नहीं</div>
+                    <div class="function-syntax">if(isupper(c)) { /* uppercase */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">islower(c)</div>
+                    <div class="function-desc">Character lowercase है या नहीं</div>
+                    <div class="function-syntax">if(islower(c)) { /* lowercase */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">toupper(c)</div>
+                    <div class="function-desc">Character को uppercase में convert करता है</div>
+                    <div class="function-syntax">char upper = toupper(c);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">tolower(c)</div>
+                    <div class="function-desc">Character को lowercase में convert करता है</div>
+                    <div class="function-syntax">char lower = tolower(c);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">isspace(c)</div>
+                    <div class="function-desc">Character whitespace है या नहीं</div>
+                    <div class="function-syntax">if(isspace(c)) { /* whitespace */ }</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="math">
+            <div class="section-header">🔢 MATHEMATICAL FUNCTIONS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">abs(x) / fabs(x)</div>
+                    <div class="function-desc">Absolute value return करता है</div>
+                    <div class="function-syntax">int result = abs(-5);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">pow(base, exp)</div>
+                    <div class="function-desc">Power calculation करता है</div>
+                    <div class="function-syntax">double result = pow(2, 3);</div>
+                    <div class="complexity">O(log exp)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">sqrt(x)</div>
+                    <div class="function-desc">Square root return करता है</div>
+                    <div class="function-syntax">double result = sqrt(25);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">ceil(x)</div>
+                    <div class="function-desc">Ceiling value (उपर वाला integer)</div>
+                    <div class="function-syntax">double result = ceil(4.3);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">floor(x)</div>
+                    <div class="function-desc">Floor value (नीचे वाला integer)</div>
+                    <div class="function-syntax">double result = floor(4.7);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">max(a, b)</div>
+                    <div class="function-desc">Maximum value return करता है</div>
+                    <div class="function-syntax">int result = max(5, 10);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">min(a, b)</div>
+                    <div class="function-desc">Minimum value return करता है</div>
+                    <div class="function-syntax">int result = min(5, 10);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">swap(a, b)</div>
+                    <div class="function-desc">दो values को swap करता है</div>
+                    <div class="function-syntax">swap(a, b);</div>
+                    <div class="complexity">O(1)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">gcd(a, b)</div>
+                    <div class="function-desc">Greatest Common Divisor (C++14+)</div>
+                    <div class="function-syntax">int result = gcd(12, 8);</div>
+                    <div class="complexity">O(log min(a,b))</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="set">
+            <div class="section-header">📦 SET & MAP FUNCTIONS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">s.insert(val)</div>
+                    <div class="function-desc">Set में element insert करता है</div>
+                    <div class="function-syntax">s.insert(10);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.erase(val)</div>
+                    <div class="function-desc">Element को remove करता है</div>
+                    <div class="function-syntax">s.erase(10);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.find(val)</div>
+                    <div class="function-desc">Element को find करता है</div>
+                    <div class="function-syntax">auto it = s.find(10);</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">s.count(val)</div>
+                    <div class="function-desc">Element present है या नहीं (0 या 1)</div>
+                    <div class="function-syntax">if(s.count(10)) { /* present */ }</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">m[key] = value</div>
+                    <div class="function-desc">Map में key-value pair add करता है</div>
+                    <div class="function-syntax">m["apple"] = 5;</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">m.find(key)</div>
+                    <div class="function-desc">Key को find करता है</div>
+                    <div class="function-syntax">auto it = m.find("apple");</div>
+                    <div class="complexity">O(log n)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="algorithms">
+            <div class="section-header">⚡ STL ALGORITHMS</div>
+            <div class="function-grid">
+                <div class="function-box">
+                    <div class="function-name">*max_element()</div>
+                    <div class="function-desc">Maximum element return करता है</div>
+                    <div class="function-syntax">int maxVal = *max_element(v.begin(), v.end());</div>
+                    <div class="complexity">O(n)</div>
+                </div>
+                
+                <div class="function-box">
+                    <div class="function-name">*min_element()</div>
+                    <div class="function-desc">Minimum element return करता है</div>
+                    <div class="function-syntax">int minVal = *min_element(v.begin(), v.end());</div>
+                    <div class="complexity">
